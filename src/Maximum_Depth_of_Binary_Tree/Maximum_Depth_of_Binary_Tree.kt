@@ -1,5 +1,7 @@
 package Maximum_Depth_of_Binary_Tree
 
+import structure.TreeNode
+
 fun main() {
     val solution = Solution()
     val node = TreeNode(3)
@@ -8,10 +10,6 @@ fun main() {
     node.right?.left = TreeNode(15)
     node.right?.right = TreeNode(7)
     println(solution.maxDepth(node))
-}
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
 
 /**
