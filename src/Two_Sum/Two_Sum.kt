@@ -1,10 +1,5 @@
 package Two_Sum
 
-fun main() {
-    val solution = Solution()
-    print(solution.twoSum(intArrayOf(2, 7, 11, 15), 9).toList())
-}
-
 /**
  * Use [HashMap] to save visited value
  */

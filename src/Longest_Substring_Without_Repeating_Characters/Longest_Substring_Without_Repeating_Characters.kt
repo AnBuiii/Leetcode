@@ -3,12 +3,6 @@ package Longest_Substring_Without_Repeating_Characters
 /**
  * Create a temp, if a [Char] is repeated, clear temp
  */
-
-fun main() {
-    val solution = Solution()
-    print(solution.lengthOfLongestSubstring("bbbbb"))
-}
-
 class Solution {
     fun lengthOfLongestSubstring(s: String): Int {
         var temp = ""
