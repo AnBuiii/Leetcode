@@ -14,6 +14,6 @@ class Maximum_Depth_of_Binary_Tree_Test {
         node.right = TreeNode(20)
         node.right?.left = TreeNode(15)
         node.right?.right = TreeNode(7)
-        assertEquals(solution.maxDepth(node), 3)
+        assertEquals(3, solution.maxDepth(node))
     }
 }

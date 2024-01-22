@@ -15,6 +15,6 @@ class Longest_Substring_Without_Repeating_Characters_Test {
 
     @Test
     fun lengthOfLongestSubstring() {
-        assertEquals(solution.lengthOfLongestSubstring("bbbbb"), 1)
+        assertEquals(1, solution.lengthOfLongestSubstring("bbbbb"))
     }
 }

@@ -8,6 +8,6 @@ class Two_Sum_Test {
     @Test
     fun twoSum() {
         val solution = Solution()
-        assertArrayEquals(solution.twoSum(intArrayOf(2, 7, 11, 15), 9), intArrayOf(0, 1))
+        assertArrayEquals(intArrayOf(0, 1), solution.twoSum(intArrayOf(2, 7, 11, 15), 9))
     }
 }
