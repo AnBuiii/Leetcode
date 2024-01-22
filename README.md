@@ -1,6 +1,9 @@
-# Leetcode solution in Kotlin
+![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+# [Leetcode](https://leetcode.com/problemset/)
 
-Visit my account [AnBuiii](https://leetcode.com/AnBuiii/).
+1 test is included with each solution
+
+Visit my Leetcode account [AnBuiii](https://leetcode.com/AnBuiii/).
 
 | #   | Title                                                                                                                           | Solution                                                                                                       | Tag                | Difficult |
 |-----|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------|-----------|
