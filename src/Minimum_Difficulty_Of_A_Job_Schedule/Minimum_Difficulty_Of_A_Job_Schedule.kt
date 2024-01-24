@@ -12,21 +12,21 @@ class Solution {
             }
         }
 
-        val mem = Array(d + 1) { IntArray(jobDifficulty.size) { -1 } }
+        val temp = Array(d + 1) { IntArray(jobDifficulty.size) { -1 } }
 
         fun getMinDifficulty(pos: Int, daysLeft: Int): Int {
             if (daysLeft == 1) {
                 return dp[0][pos]
             }
 
-            if (mem[daysLeft][pos] != -1) return mem[daysLeft][pos]
+            if (temp[daysLeft][pos] != -1) return temp[daysLeft][pos]
 
             var result = Int.MAX_VALUE
             for (i in pos downTo daysLeft - 1) {
                 result = minOf(result, getMinDifficulty(i - 1, daysLeft - 1) + dp[i][pos])
             }
 
-            mem[daysLeft][pos] = result
+            temp[daysLeft][pos] = result
             return result
         }
 

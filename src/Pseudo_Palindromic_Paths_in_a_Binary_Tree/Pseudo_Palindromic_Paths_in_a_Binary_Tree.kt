@@ -8,7 +8,7 @@ import structure.TreeNode
  * if there are no more than 1 odd num => the path is pseudo-palindromic
  */
 class Solution {
-    val dp = IntArray(11) { 0 }
+    private val dp = IntArray(11) { 0 }
     fun pseudoPalindromicPaths(root: TreeNode?): Int {
         if (root == null) return 0
         dp[root.`val`]++

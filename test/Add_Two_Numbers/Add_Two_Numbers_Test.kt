@@ -23,6 +23,6 @@ class Add_Two_Numbers_Test {
         node2.next = ListNode(6)
         node2.next?.next = ListNode(4)
 
-        assertEquals("807", getString(solution.addTwoNumbers(node1, node2)))
+        assertEquals("807", Solution.getString(solution.addTwoNumbers(node1, node2)))
     }
 }
