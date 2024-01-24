@@ -8,11 +8,11 @@ class ListNode(val `val`: Int) {
     }
 
     companion object {
-        fun fromArray(array: IntArray): ListNode? {
-            if (array.isEmpty()) return null
+        fun fromIntArrayOf(vararg elements: Int): ListNode? {
+            if (elements.isEmpty()) return null
             val root = ListNode(0)
             var temp: ListNode? = root
-            for (element in array) {
+            for (element in elements) {
                 temp?.next = ListNode(element)
                 temp = temp?.next
             }
