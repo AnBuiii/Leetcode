@@ -1,51 +1,39 @@
 package Length_of_Longest_Fibonacci_Subsequence
 
+// 2 14 18 32 50
 class Solution {
+
     fun lenLongestFibSubseq(arr: IntArray): Int {
-        val dp = IntArray(arr.size) { 0 } // countedLength
-
         var max = 0
-        for (i in 2..arr.lastIndex) {
-            val cur = arr[i] // current value
-            var curMax = 0
+        val set = HashSet<Int>(arr.size)
+        arr.forEach {
+            set.add(it)
+        }
 
-            var l = 0 // low index
-            var h = i-1 //  high index
-
-            while (l < h) {
-                val s = arr[l] + arr[h]
-                when (s.compareTo(cur)) {
-                    -1 -> {
-                        l++
-                    }
-
-                    0 -> {
-                        if (dp[l] == 0 && dp[h] == 0) {
-                            curMax = maxOf(curMax, 3)
-                        } else {
-                            curMax = maxOf(dp[l], dp[h], curMax) + 1
-                        }
-
-                        l++
-                        h--
-                    }
-
-                    1 -> {
-                        h--
-                    }
-                }
+        fun rec(i: Int, j: Int): Int {
+            return if (set.contains(i + j)) {
+                rec(j, i + j) + 1
+            } else {
+                0
             }
-            dp[i] = curMax
-            max = maxOf(max, curMax)
+
 
         }
 
+        for (i in 0..arr.size - 3) {
+            for (j in i + 1..arr.size - 2) {
+                val cur = rec(arr[i], arr[j])
+                if (cur != 0) {
+                    max = maxOf(max, cur + 2)
+                }
+            }
+        }
         return max
     }
 }
 
 fun main() {
-    val arr = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8)
+    val arr = intArrayOf(2, 4, 7, 8, 9, 10, 14, 15, 18, 23, 32, 50)
     val s = Solution()
 
     println(s.lenLongestFibSubseq(arr))
