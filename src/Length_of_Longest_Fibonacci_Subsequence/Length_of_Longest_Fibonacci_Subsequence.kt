@@ -31,12 +31,3 @@ class Solution {
         return max
     }
 }
-
-fun main() {
-    val arr = intArrayOf(2, 4, 7, 8, 9, 10, 14, 15, 18, 23, 32, 50)
-    val s = Solution()
-
-    println(s.lenLongestFibSubseq(arr))
-
-
-}
